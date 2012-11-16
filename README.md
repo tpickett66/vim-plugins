@@ -22,6 +22,13 @@ git clone git@github.com:tpickett66/vim-plugins.git ~/.vim
 git clone git://github.com/tpickett66/vim-plugins.git ~/.vim
 ```
 
+Actually pull in the plugins since they're all git submodules
+```
+cd ~/.vim
+git submodule init
+git submodule update
+```
+
 Build the command-t C extension
 
 ```bash
