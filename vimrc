@@ -43,4 +43,7 @@ endif
 " set some custom key mappings
 map <C-n> :NERDTree<CR> " open nerdtree on Ctrl-n
 
-" add assignment opperators for vim-align-assignment
+" set filetype specific indention settings
+au FileType python setl sw=2 sts=2 et
+au FileType ruby setl sw=2 sts=2 et
+au FileType javascript setl sw=4 sts=4 et
