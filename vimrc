@@ -25,7 +25,8 @@ set number
 set ruler
 
 " set search options
-set smartcase " default to case insensitive search unless we mix case
+set ignorecase " default to case insensitive search unless we mix case
+set smartcase " this has to be set along with above for case insensitive search
 set incsearch " jump to our search results as we type search
 set hlsearch  " highlight our search results
 
