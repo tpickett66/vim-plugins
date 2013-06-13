@@ -28,7 +28,7 @@ set ruler
 set ignorecase " default to case insensitive search unless we mix case
 set smartcase " this has to be set along with above for case insensitive search
 set incsearch " jump to our search results as we type search
-set hlsearch  " highlight our search results
+""set hlsearch  " highlight our search results
 
 " don't polute our working dir w/ backups and swap files
 set backup
