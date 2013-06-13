@@ -44,6 +44,10 @@ endif
 " set some custom key mappings
 map <C-n> :NERDTree<CR> " open nerdtree on Ctrl-n
 
+" set split options
+set splitright
+set splitbelow
+
 " set filetype specific indention settings
 au FileType python setl sw=2 sts=2 et
 au FileType ruby setl sw=2 sts=2 et
