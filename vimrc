@@ -53,5 +53,7 @@ au FileType python setl sw=2 sts=2 et
 au FileType ruby setl sw=2 sts=2 et
 au FileType javascript setl sw=4 sts=4 et
 
+set ml
+set mls=2
 " Fuck whitespace
 autocmd FileType c,cpp,java,php,ruby,eruby,haml,sass,scss,python,html,css,javascript,cucumber,slim,coffee autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))"
