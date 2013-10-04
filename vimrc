@@ -42,7 +42,10 @@ if has("gui_running")
 endif
 
 " set some custom key mappings
-map <C-n> :NERDTree<CR> " open nerdtree on Ctrl-n
+" open nerdtree on Ctrl-n
+map <C-n> :NERDTree<CR> 
+" start Ctrl-P plugin on Ctrl-t
+map <C-t> :CtrlPMixed<CR>
 
 " set split options
 set splitright
