@@ -43,3 +43,6 @@
 [submodule "bundle/vim-slim"]
 	path = bundle/vim-slim
 	url = git@github.com:slim-template/vim-slim.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = git@github.com:kien/ctrlp.vim.git
