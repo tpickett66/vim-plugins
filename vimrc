@@ -2,6 +2,10 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+set nocompatible
+" allow unsaved background buffers and remember marks/undo for them
+set hidden
+
 " turn on syntax highlighting
 syntax on
 
@@ -23,6 +27,16 @@ colorscheme solarized
 " let us know where we are
 set number
 set ruler
+set cursorline
+
+" set our window sizes
+set winwidth=84
+" vim whines if winheight is less than winminheight but if we set it 
+" to a large value before winminheight it will clobber the other splits
+" so hacky hacky hacky, also thanks Gary Bernhardt
+set winheight=5
+set winminheight=5
+set winheight=99
 
 " set search options
 set ignorecase " default to case insensitive search unless we mix case
