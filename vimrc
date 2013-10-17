@@ -65,6 +65,12 @@ map <C-t> :CtrlPMixed<CR>
 set splitright
 set splitbelow
 
+" bind some handy key combos for split nav
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " set filetype specific indention settings
 au FileType python setl sw=2 sts=2 et
 au FileType ruby setl sw=2 sts=2 et
