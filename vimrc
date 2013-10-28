@@ -9,6 +9,10 @@ set hidden
 " set our leader key
 let mapleader=","
 
+" Prevent Vim from clobbering the scrollback buffer. See
+" http://www.shallowsky.com/linux/noaltscreen.html
+set t_ti= t_te=
+
 " turn on syntax highlighting
 syntax on
 
