@@ -6,6 +6,9 @@ set nocompatible
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
 
+" set our leader key
+let mapleader=","
+
 " turn on syntax highlighting
 syntax on
 
@@ -58,8 +61,27 @@ endif
 " set some custom key mappings
 " open nerdtree on Ctrl-n
 map <C-n> :NERDTree<CR> 
-" start Ctrl-P plugin on Ctrl-t
-map <C-t> :CtrlPMixed<CR>
+
+" let's try selecta for fuzzy search
+
+" Run a given vim command on the results of fuzzy selecting from a given
+" shell command. See usage below.
+function! SelectaCommand(choice_command, selecta_args, vim_command)
+  try
+    silent let selection = system(a:choice_command . " | selecta " . a:selecta_args)
+  catch /Vim:Interrupt/
+    " Swallow the ^C so that the redraw below happens; otherwise there will be
+    " leftovers from selecta on the screen
+    redraw!
+    return
+  endtry
+  redraw!
+  exec a:vim_command . " " . selection
+endfunction
+
+" Find all files in all non-dot directories starting in the working directory.
+" Fuzzy select one of those. Open the selected file with :e.
+nnoremap <leader>f :call SelectaCommand("find * -type f", "", ":e")<cr>
 
 " set split options
 set splitright
